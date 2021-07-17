@@ -1,0 +1,56 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{appendix}
+\usepackage{import}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{hyperref}
+    \hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+    }
+
+    \title{\textbf{Academic Journal Template}}
+    \author{Author 1$^{1}$; Author 2$^{2}$\\
+        1: Affiliation Department, University, Country\\
+        2: Affiliation Department, University, Country}
+    \date{}
+    % Keywords command
+        \providecommand{\keywords}[1]
+        {
+          \small	
+          \textbf{\textit{Keywords:}} #1
+        }
+\usepackage{natbib}
+\bibliographystyle{apalike2}
+\usepackage{graphicx}
+\usepackage[left=2.5cm,right=2.5cm,top=2.6cm,bottom=2.6cm]{geometry}
+
+\begin{document}
+\maketitle
+    \begin{abstract}
+        It should be between 150 and 200 words long, summarizing the main idea of the problem or research question, what methodology was used and what the main findings were.\\
+        \keywords{List here at most 5 keywords of your research} 
+    \end{abstract}
+    
+    \tableofcontents
+    
+    \input{Sections/1.Introduction}
+    \input{Sections/2.Literature review}
+    \input{Sections/3.Methods and procedures}
+    \input{Sections/4.Experimental numerical setting}
+    \input{Sections/5.Results and Discussion}
+    \input{Sections/6.Conclusions and future research}
+    \input{Sections/7.Acknowledgements (optional)}
+
+    \bibliography{references}
+    \addcontentsline{toc}{section}{References}
+    \appendix
+    \input{Sections/8.Appendices}
+
+    The paper must be 5 to 7 pages long including tables, charts and figures. The file size must be no more than 10MB.
+\end{document}
